@@ -1,1 +1,1 @@
-# My-Tmux-NVim-workflow
+# My custom Tmux-NVim config & workflow
