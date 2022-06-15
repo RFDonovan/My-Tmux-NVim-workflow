@@ -2,20 +2,26 @@
 
 ## Description
 
-Over time, the though of reusing Vim hits me again. It is a blessing to see people sharing their workflow all over the internet.
+Over time, the though of reusing Vim hits me again. It is a blessing to see people sharing their **"terminal-only"** workflow all over the internet.
 (shall I mention [this guy](https://www.youtube.com/watch?v=sSOfr2MtRU8) in particular who inspired me so much :) ).
 
-And so, I found interesting to document my journey with these two amazing tools.
+I wanted to document my journey setting up those amazing tools so here it is.
 
-I'll update & adapt the document as I learn and adopt new things from here and there
-
-
+I'll update & adapt the document as I learn and adopt new things from here and there.
 
 ## My environment
 
 I am using **Pop-Os 22.04** , a distro based on Ubuntu so all the confs are very similar to Ubuntu's (`deb` and  `apt` is life! Screw you Arch users!!!)
 
-(PS: I still try to figure out a way to run `tmux` on Windows)
+
+
+~~(PS: I still try to figure out a way to run `tmux` on Windows)~~
+
+On windows, we can use WSL and install Ubuntu via Microsoft Store to have everything set exactly the same way. Hourray! 🥳🥳🥳🥳.
+
+We can then install the **Windows Terminal** to get some sexy and juicy customized terminal on Windows (I've always hated `CMD.exe` and can't get along with `powershell`) .
+
+> Shall we create a little guide for windows here ? 😕
 
 ## Installation
 
@@ -25,13 +31,11 @@ I am using **Pop-Os 22.04** , a distro based on Ubuntu so all the confs are very
 sudo apt install tmux
 ```
 
-Et voilà!
-
 ### NeoVim
 
-For **NeoVim**, I build from source but we can also install via `sudo apt install nvim`.
+For **NeoVim**, we can install directly via `sudo apt install nvim`.
 
-Or build it from the repo:
+Or build it from the repo (that's what I did):
 
 ```shell
 git clone https://github.com/neovim/neovim
@@ -54,7 +58,7 @@ bind -r k select-pane -U
 bind -r j select-pane -D                                            
 bind -r h select-pane -L                                            
 bind -r l select-pane -R
-                                            
+
 #moving window by shift+ctrl+arrow                                  
 bind-key -n C-S-Left swap-window -t -1                              
 bind-key -n C-S-Right swap-window -t +1 
@@ -78,6 +82,10 @@ tmux split-window -h -p 50
 3- Run the `tmux` command
 
 4- From the tmux *created window*, run `./create_panes.sh` 
+
+**Tips:** we can add a symbolic link to this script in the `/usr/bin` folder to make it globally accessible
+
+`sudo ln -s <absolute_path_to_the_script>/create_panes.sh /usr/bin/create_tmux_panes`
 
 #### Tmux **go-to** commands
 
@@ -126,7 +134,7 @@ Config is not in `.vimrc` for NeoVim. We have to create a dedicated folder for t
 
 ```shell
 mkdir ~/.config/nvim
-touch ~/.config/init.vim
+touch ~/.config/nvim/init.vim
 ```
 
 Shall we add few lines to `~/.config/init.vim` in order to **make `nvim` great again**?
@@ -209,5 +217,25 @@ let g:airline#extensions#branch#enabled = 1
 Once done, we can go to `nvim` and play with the commands
 
 `:PlugStatus`,`:PlugInstall`..., just use `Plug<Tab>` to autocomplete
+
+
+
+### Other cool tools we can add to nvim
+
+##### Lazygit
+
+[kdheepak/lazygit.nvim](https://github.com/kdheepak/lazygit.nvim) is the vim integration of [lazygit](https://github.com/jesseduffield/lazygit) command
+
+In order for the plugin to work correctly , we have to download install the tool from the link above.
+
+##### Lf.vim
+
+It is a terminal file manager that work like vim. A good alternative to NERDTree 
+
+Same with Lazygit, we have to install the [lf command line](https://github.com/gokcehan/lf) before using the  [lf.vim](https://github.com/ptzz/lf.vim) plugin.
+
+##### Telescope
+
+[This one](https://github.com/nvim-telescope/telescope.nvim) is so delicious 😋 i can't take my eyes out of it! 
 
 
