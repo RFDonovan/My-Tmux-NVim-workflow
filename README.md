@@ -13,8 +13,6 @@ I'll update & adapt the document as I learn and adopt new things from here and t
 
 I am using **Pop-Os 22.04** , a distro based on Ubuntu so all the confs are very similar to Ubuntu's (`deb` and  `apt` is life! Screw you Arch users!!!)
 
-
-
 ~~(PS: I still try to figure out a way to run `tmux` on Windows)~~
 
 On windows, we can use WSL and install Ubuntu via Microsoft Store to have everything set exactly the same way. Hourray! 🥳🥳🥳🥳.
@@ -72,8 +70,8 @@ To create fast workspace, I *stole* someone's script and made it my own (God for
 
 ```bash
 #!/bin/bash
-tmux split-window -v -p 30                                          │                                                          │
-tmux split-window -h -p 66                                          │                                                          │
+tmux split-window -v -p 30
+tmux split-window -h -p 66
 tmux split-window -h -p 50
 ```
 
@@ -218,8 +216,6 @@ Once done, we can go to `nvim` and play with the commands
 
 `:PlugStatus`,`:PlugInstall`..., just use `Plug<Tab>` to autocomplete
 
-
-
 ### Other cool tools we can add to nvim
 
 ##### Lazygit
@@ -238,4 +234,9 @@ Same with Lazygit, we have to install the [lf command line](https://github.com/g
 
 [This one](https://github.com/nvim-telescope/telescope.nvim) is so delicious 😋 i can't take my eyes out of it! 
 
+##### COC
 
+```shell
+mkdir ~/.config/nvim/plug-config
+toucy ~/.config/nvim/plug-config/coc.vim
+```

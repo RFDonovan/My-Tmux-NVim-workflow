@@ -21,5 +21,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Telescope
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
+    " lf
+    Plug 'ptzz/lf.vim'
+    Plug 'voldikss/vim-floaterm'
+    " lazygit
+    Plug 'kdheepak/lazygit.nvim'
+		" Use release branch (recommend)
+		Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
