@@ -1,32 +1,36 @@
-" auto-install vim-plug
-if empty(glob('~/.config/nvim/autoload/plug.vim'))
-  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  "autocmd VimEnter * PlugInstall
-  "autocmd VimEnter * PlugInstall | source $MYVIMRC
-endif
+call plug#begin('~/AppData/Local/nvim/autoload/plugged')
+" Dashboard
+Plug 'glepnir/dashboard-nvim'
 
-call plug#begin('~/.config/nvim/autoload/plugged')
+" Conquer of completion
+Plug 'neoclide/coc.nvim' , {'branch': 'release'}
 
-    " Better Syntax Support
-    Plug 'sheerun/vim-polyglot'
-    " File Explorer
-    Plug 'scrooloose/NERDTree'
-    " Auto pairs for '(' '[' '{'
-    Plug 'jiangmiao/auto-pairs'
-    " Airline
-    Plug 'vim-airline/vim-airline'
-    " Gruvbox theme
-    Plug 'morhetz/gruvbox'
-    " Telescope
-    Plug 'nvim-lua/plenary.nvim'
-    Plug 'nvim-telescope/telescope.nvim'
-    " lf
-    Plug 'ptzz/lf.vim'
-    Plug 'voldikss/vim-floaterm'
-    " lazygit
-    Plug 'kdheepak/lazygit.nvim'
-		" Use release branch (recommend)
-		Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'jiangmiao/auto-pairs'
+Plug 'nvim-lua/plenary.nvim'
+" status bar
+Plug 'vim-airline/vim-airline'
+" theme gruvbox :colorscheme gruvbox
+Plug 'ellisonleao/gruvbox.nvim'
+" search file :Telescope find_files
+Plug 'nvim-telescope/telescope.nvim'
+" Browse file & folder using :Telescope file_browser
+Plug 'nvim-telescope/telescope-file-browser.nvim'
+
+" nvim tree file explorer
+Plug 'kyazdani42/nvim-web-devicons' " for file icons
+Plug 'kyazdani42/nvim-tree.lua'
+" Lazygit integration
+Plug 'kdheepak/lazygit.nvim'
+" Floating explorer
+Plug 'ptzz/lf.vim'
+Plug 'voldikss/vim-floaterm'
+" Bufferline
+Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
+" Plug 'ryanoasis/vim-devicons' Icons without colours
+Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
+" Toggle comments
+Plug 'numToStr/Comment.nvim'
+" Hop motion
+Plug 'phaazon/hop.nvim'
 
 call plug#end()

@@ -238,5 +238,15 @@ Same with Lazygit, we have to install the [lf command line](https://github.com/g
 
 ```shell
 mkdir ~/.config/nvim/plug-config
-toucy ~/.config/nvim/plug-config/coc.vim
+touch ~/.config/nvim/plug-config/coc.vim
 ```
+##### HOP Motion
+Hop is amazing! I can go anywhere in the screen in 3 keystroke max.
+I use `z` to start the `HopWord`
+
+```vim
+" Hop motion
+Plug 'phaazon/hop.nvim'
+
+```
+
