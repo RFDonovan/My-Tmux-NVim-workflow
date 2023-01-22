@@ -202,11 +202,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 call plug#end()
 ```
 
---
-
-**PS**: After few months playing with nvim My dot config no longer reflect what is written in this guide.
-I decided to remove some of the plugins above because I rarely use them.
-
 Then add the file to my `~/.config/nvim/init.vim`
 
 ```vim
@@ -243,5 +238,10 @@ Same with Lazygit, we have to install the [lf command line](https://github.com/g
 
 ```shell
 mkdir ~/.config/nvim/plug-config
-toucy ~/.config/nvim/plug-config/coc.vim
+touch ~/.config/nvim/plug-config/coc.vim
 ```
+
+---
+
+**PS**: After few months playing with nvim My dot config no longer reflect what is written in this guide.
+I decided to remove some of the plugins above because I rarely use them.
