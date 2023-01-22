@@ -202,6 +202,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 call plug#end()
 ```
 
+--
+
+**PS**: After few months playing with nvim My dot config no longer reflect what is written in this guide.
+I decided to remove some of the plugins above because I rarely use them.
+
 Then add the file to my `~/.config/nvim/init.vim`
 
 ```vim

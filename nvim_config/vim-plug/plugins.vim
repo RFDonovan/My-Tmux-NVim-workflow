@@ -16,17 +16,20 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'jiangmiao/auto-pairs'
     " Airline
     Plug 'vim-airline/vim-airline'
+    " Hop
+    Plug 'phaazon/hop.nvim'
+    " Ayu theme
+    Plug 'ayu-theme/ayu-vim'
     " Gruvbox theme
-    Plug 'morhetz/gruvbox'
+    " Plug 'morhetz/gruvbox'
     " Telescope
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
-    " lf
-    Plug 'ptzz/lf.vim'
-    Plug 'voldikss/vim-floaterm'
     " lazygit
     Plug 'kdheepak/lazygit.nvim'
-		" Use release branch (recommend)
-		Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    " comment
+    Plug 'numToStr/comment.nvim'
+    " Use release branch (recommend)
+	" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
